@@ -21,6 +21,6 @@ if xabar:
     },
     ]
     with st.spinner('Tez orada savolingizga javob beramiz...'):
-        for part in client.chat(st.secrets['MODEL'], messages=messages, stream=True):
+        for part in client.chat("gpt-oss:120b", messages=messages, stream=True):
             response_text += part['message']['content']
             placeholder.markdown(response_text, unsafe_allow_html=True)
