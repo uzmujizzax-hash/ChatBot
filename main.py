@@ -6,7 +6,7 @@ client = Client(
     headers={'Authorization': f'Bearer {st.secrets["OLLAMA_API_KEY"]}'}
 )
 
-st.markdown("## :rainbow[O'zbekistan Milliy universitetining Jizzax filiali bot yordamchisi]")
+st.markdown("## :rainbow[O'zbekiston Milliy universitetining Jizzax filiali bot yordamchisi]")
 
 xabar = st.chat_input("Savolingizni kiriting:")
 
