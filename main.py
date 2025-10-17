@@ -1,10 +1,9 @@
 import os
 from ollama import Client
-from config import OLLAMA_API_KEY
 import streamlit as st  
 client = Client(
     host="https://ollama.com",
-    headers={'Authorization': 'Bearer ' + OLLAMA_API_KEY}
+    headers={'Authorization': 'Bearer ' + st.secrets["OLLAMA_API_KEY"]}
 )
 
 st.markdown("## :rainbow[Ollama va Streamlit bilan ChatGPT modeli]")
