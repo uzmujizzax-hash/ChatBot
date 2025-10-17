@@ -2,3 +2,4 @@ environs
 ollama
 streamlit
 streamlit[pdf]
+sentence-transformers
