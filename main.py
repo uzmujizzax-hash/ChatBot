@@ -2,7 +2,7 @@ import os
 from ollama import Client
 import streamlit as st  
 client = Client(
-    host=st.secrets["HOST"],
+    host="https://ollama.com",
     headers={'Authorization': f'Bearer {st.secrets["OLLAMA_API_KEY"]}'}
 )
 
