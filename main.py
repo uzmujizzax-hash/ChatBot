@@ -2,7 +2,7 @@ import os
 from ollama import Client
 import streamlit as st  
 client = Client(
-    host="https://ollama.com",
+    host=st.secrets["HOST"],
     headers={'Authorization': f'Bearer {st.secrets["OLLAMA_API_KEY"]}'}
 )
 
@@ -21,6 +21,6 @@ if xabar:
     },
     ]
     with st.spinner('Tez orada savolingizga javob beramiz...'):
-        for part in client.chat('gpt-oss:120b', messages=messages, stream=True):
+        for part in client.chat(st.secrets['MODEL'], messages=messages, stream=True):
             response_text += part['message']['content']
             placeholder.markdown(response_text, unsafe_allow_html=True)
